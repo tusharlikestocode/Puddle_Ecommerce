@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from item.models import Category, Item
 from .forms import SignupForm
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 def index(request):
     items = Item.objects.filter(is_sold=False)[0:6]
