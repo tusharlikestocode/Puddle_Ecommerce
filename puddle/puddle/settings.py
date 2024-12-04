@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-gh@j*k%!@bq7@ldk!%vy8fmv_epmkc!%6l1o%wys%#4ligeih*
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    
+
 ]
 
 LOGIN_URL = '/login/'
@@ -54,7 +54,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
+
+STATIC_URL = '/static/'
 
 ROOT_URLCONF = 'puddle.urls'
 
